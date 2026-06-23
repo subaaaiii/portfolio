@@ -1,4 +1,4 @@
-import hero from "../assets/hero_2.png";
+import hero from "../assets/hero_2.webp";
 
 const AboutMe = () => {
   return (
@@ -11,6 +11,7 @@ const AboutMe = () => {
                 <img
                   src={hero}
                   alt="Profile"
+                  loading="lazy"
                   className="w-auto h-75 md:h-130 -mt-15 md:-mt-30 object-cover"
                 />
               </div>

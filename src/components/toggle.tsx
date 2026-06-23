@@ -28,7 +28,8 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={toggleTheme}
-      className={`relative w-16 h-8 flex items-center rounded-full p-1 transition-colors duration-300 ${
+      aria-label="Set web theme"
+      className={`relative w-16 h-8 flex items-center rounded-full p-1 transition-colors duration-300 cursor-pointer ${
         darkMode ? "bg-secondary" : "bg-gray-300"
       }`}
     >

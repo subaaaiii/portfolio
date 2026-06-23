@@ -1,25 +1,19 @@
-import './App.css'
-import Skills from './components/skills'
-import AboutMe from './components/about'
-import Home from './components/home'
-import Navbar from './components/navbar'
-import Projects from './components/projects'
-import Contact from './components/contact'
-import Footer from './components/footer'
+import "./App.css";
+import Footer from "./components/footer";
+import Navbar from "./components/navbar";
+import Approutes from "./routes";
+import { useSEO } from "./seo";
 
 function App() {
+  useSEO({});
 
   return (
     <div className="font-poppins bg-bg">
       <Navbar />
-      <Home/>
-      <AboutMe/>
-      <Skills/>
-      <Projects/>
-      <Contact/>
-      <Footer/>
+      <Approutes />
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,8 +1,8 @@
-import goLogo from "../assets/go.png";
-import pythonLogo from "../assets/python.png";
-import expressLogo from "../assets/express.png";
-import reactLogo from "../assets/react.png";
-import tailwindLogo from "../assets/tailwind.jpg";
+import goLogo from "../assets/go.webp";
+import pythonLogo from "../assets/python.webp";
+import expressLogo from "../assets/express.webp";
+import reactLogo from "../assets/react.webp";
+import tailwindLogo from "../assets/tailwind.webp";
 const Skills = () => {
   return (
     <section id="skills"  className="max-w-6xl mx-auto px-4 min-h-screen text-text">
@@ -10,23 +10,23 @@ const Skills = () => {
         <div className="mt-40 md:mt-0 col-span-2 md:col-span-1 order-2 md:order-1">
           <div className="relative  w-full h-full">
             <div className="absolute top-0 left-10 md:left-30 rounded-full w-20 h-20 md:w-22 md:h-22 object-contain shadow-xl bg-white ">
-              <img src={goLogo} alt="Go Logo" />
+              <img loading="lazy" src={goLogo} alt="Go Logo" />
             </div>
             <div className="absolute top-10 right-10 md:right-30 rounded-full w-20 h-20 md:w-22 md:h-22 object-contain shadow-xl bg-white overflow-hidden">
-              <img src={expressLogo} alt="Express Logo" />
+              <img loading="lazy" src={expressLogo} alt="Express Logo" />
             </div>
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full w-20 h-20 md:w-22 md:h-22 object-contain p-3 shadow-xl bg-white">
-              <img src={reactLogo} alt="React Logo" />
+              <img loading="lazy" src={reactLogo} alt="React Logo" />
             </div>
             <div className="absolute bottom-0 right-10 md:right-30 rounded-full w-20 h-20 md:w-22 md:h-22 object-contain p-1 shadow-xl bg-white ">
-              <img
+              <img loading="lazy"
                 src={tailwindLogo}
                 alt="Tailwind Logo"
                 className="rounded-full"
               />
             </div>
             <div className="absolute bottom-10 left-10 md:left-30  rounded-full w-20 h-20 md:w-22 md:h-22 object-contain p-3 shadow-xl  bg-white ">
-              <img src={pythonLogo} alt="Python Logo" />
+              <img loading="lazy" src={pythonLogo} alt="Python Logo" />
             </div>
           </div>
         </div>

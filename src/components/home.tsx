@@ -1,5 +1,5 @@
 import { FaGithub, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
-import hero from "../assets/hero.png";
+import hero from "../assets/hero.webp";
 const Home = () => {
   return (
     <section
@@ -24,6 +24,7 @@ const Home = () => {
           <div className="flex justify-between items-center">
             <button
               className="py-2 px-8 bg-secondary text-white  rounded-lg mt-4 hover:bg-secondary/80 transition duration-300 cursor-pointer"
+              aria-label="Send Hiring Inquiry on email"
               onClick={() => {
                 window.open(
                   "https://mail.google.com/mail/?view=cm&fs=1&to=subairibairi689@gmail.com&su=Hiring%20Inquiry%20-%20Frontend%20%2F%20Backend%20%2F%20Fullstack%20Developer&body=Hello%20Subairi%2C%0A%0AI'm%20interested%20in%20working%20with%20you%20for%20a%20project%20or%20opportunity.%20I%20would%20like%20to%20discuss%20more%20with%20you.%0A%0APlease%20let%20me%20know%20when%20you're%20available%20for%20a%20discussion.%0A%0AThank%20you.",
@@ -36,6 +37,7 @@ const Home = () => {
             <div className="flex items-center justify-center mt-4 space-x-2 flex md:hidden">
               <a
                 href="https://github.com/subaaaiii"
+                aria-label="Open GitHub profile"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -44,6 +46,7 @@ const Home = () => {
 
               <a
                 href="https://wa.me/6283839772172"
+                aria-label="Contact whatsapp"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -52,6 +55,7 @@ const Home = () => {
 
               <a
                 href="https://instagram.com/subaaaiii"
+                aria-label="Open Instagram profile"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -60,6 +64,7 @@ const Home = () => {
 
               <a
                 href="https://linkedin.com/in/subairi"
+                aria-label="Open Linkedin profile"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -75,6 +80,8 @@ const Home = () => {
                 <img
                   src={hero}
                   alt="Profile"
+                  fetchPriority="high"
+                  loading="eager"
                   className="w-auto h-75 md:h-130 -mt-15 md:-mt-30 object-cover"
                 />
               </div>
@@ -83,42 +90,48 @@ const Home = () => {
               <img
                 src={hero}
                 alt="Profile"
+                fetchPriority="high"
+                loading="eager"
                 className="w-auto h-75 md:h-130 object-cover"
               />
             </div>
           </div>
           <div className="flex items-center justify-center mt-4 space-x-4 hidden md:flex">
             <a
-                href="https://github.com/subaaaiii"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaGithub className="w-8 h-8 cursor-pointer" />
-              </a>
+              href="https://github.com/subaaaiii"
+              aria-label="Open GitHub profile"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub className="w-8 h-8 cursor-pointer" />
+            </a>
 
-              <a
-                href="https://wa.me/6283839772172"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaWhatsapp className="w-8 h-8 cursor-pointer" />
-              </a>
+            <a
+              href="https://wa.me/6283839772172"
+              aria-label="Contact whatsapp"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaWhatsapp className="w-8 h-8 cursor-pointer" />
+            </a>
 
-              <a
-                href="https://instagram.com/subaaaiii"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaInstagram className="w-8 h-8 cursor-pointer" />
-              </a>
+            <a
+              href="https://instagram.com/subaaaiii"
+              aria-label="Open Instagram profile"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram className="w-8 h-8 cursor-pointer" />
+            </a>
 
-              <a
-                href="https://linkedin.com/in/subairi"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLinkedin className="w-8 h-8 cursor-pointer" />
-              </a>
+            <a
+              href="https://linkedin.com/in/subairi"
+              aria-label="Open Linkedin profile"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin className="w-8 h-8 cursor-pointer" />
+            </a>
           </div>
         </div>
         <div className="fixed bottom-0">
