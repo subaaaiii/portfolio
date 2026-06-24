@@ -40,6 +40,16 @@ const Projects = () => {
               pembayaran, dan dashboard administrasi dalam satu sistem yang
               terorganisir.
             </p>
+            <div className="flex flex-wrap mt-2 gap-2">
+              <div className="px-3 py-2 rounded-full bg-secondary/20 text-sm text-secondary">React.JS</div>
+              <div className="px-3 py-2 rounded-full bg-secondary/20 text-sm text-secondary">Tailwindcss</div>
+              <div className="px-3 py-2 rounded-full bg-secondary/20 text-sm text-secondary">Sweetalert2</div>
+              <div className="px-3 py-2 rounded-full bg-secondary/20 text-sm text-secondary">Express.JS</div>
+              <div className="px-3 py-2 rounded-full bg-secondary/20 text-sm text-secondary">Mysql</div>
+              <div className="px-3 py-2 rounded-full bg-secondary/20 text-sm text-secondary">JWT Auth</div>
+              <div className="px-3 py-2 rounded-full bg-secondary/20 text-sm text-secondary">Multer</div>
+              <div className="px-3 py-2 rounded-full bg-secondary/20 text-sm text-secondary">Nodemailer</div>
+            </div>
           </div>
           <div className="absolute bottom-5 left-3  flex items-center gap-1 text-md font-semibold text-secondary">
             <span>Lihat detail</span> <FaArrowRightLong className="w-5 h-5" />
@@ -50,6 +60,7 @@ const Projects = () => {
           aria-label="Open SubGame project detail"
           className="relative pb-12 col-span-3 md:col-span-1 shadow-lg rounded-lg overflow-hidden hover:-translate-y-2 transition-transform duration-300 cursor-pointer"
         >
+          <div className="absolute top-3 left-3 bg-secondary py-2 px-3 rounded-full text-white text-sm">Featured</div>
           <div className="relative  w-full h-60  bg-secondary/20 overflow-hidden">
             <img loading="lazy"
               src={subgame}
@@ -68,6 +79,19 @@ const Projects = () => {
               penjual dan pembeli, serta dashboard administrasi dalam satu
               sistem yang aman dan terorganisir.
             </p>
+            <div className="flex flex-wrap mt-2 gap-2">
+              <div className="px-3 py-2 rounded-full bg-secondary/20 text-sm text-secondary">React.JS</div>
+              <div className="px-3 py-2 rounded-full bg-secondary/20 text-sm text-secondary">Tailwindcss</div>
+              <div className="px-3 py-2 rounded-full bg-secondary/20 text-sm text-secondary">Tanstack Query</div>
+              <div className="px-3 py-2 rounded-full bg-secondary/20 text-sm text-secondary">Golang</div>
+              <div className="px-3 py-2 rounded-full bg-secondary/20 text-sm text-secondary">Mysql</div>
+              <div className="px-3 py-2 rounded-full bg-secondary/20 text-sm text-secondary">JWT Auth</div>
+              <div className="px-3 py-2 rounded-full bg-secondary/20 text-sm text-secondary">OAuth</div>
+              <div className="px-3 py-2 rounded-full bg-secondary/20 text-sm text-secondary">Docker</div>
+              <div className="px-3 py-2 rounded-full bg-secondary/20 text-sm text-secondary">Redis</div>
+              <div className="px-3 py-2 rounded-full bg-secondary/20 text-sm text-secondary">Pusher</div>
+              <div className="px-3 py-2 rounded-full bg-secondary/20 text-sm text-secondary">Gomail</div>
+            </div>
           </div>
           <div className="absolute bottom-5 left-3   flex items-center gap-1 text-md font-semibold text-secondary">
             <span>Lihat detail</span> <FaArrowRightLong className="w-5 h-5" />
@@ -96,6 +120,14 @@ const Projects = () => {
               untuk mendukung branding serta penyampaian informasi secara
               efektif.
             </p>
+            <div className="flex flex-wrap mt-2 gap-2">
+              <div className="px-3 py-2 rounded-full bg-secondary/20 text-sm text-secondary">React.JS</div>
+              <div className="px-3 py-2 rounded-full bg-secondary/20 text-sm text-secondary">Tailwindcss</div>
+              <div className="px-3 py-2 rounded-full bg-secondary/20 text-sm text-secondary">Express.JS</div>
+              <div className="px-3 py-2 rounded-full bg-secondary/20 text-sm text-secondary">Mysql</div>
+              <div className="px-3 py-2 rounded-full bg-secondary/20 text-sm text-secondary">JWT Auth</div>
+              <div className="px-3 py-2 rounded-full bg-secondary/20 text-sm text-secondary">Multer</div>
+            </div>
           </div>
           <div className="absolute bottom-5 left-3  flex items-center gap-1 text-md font-semibold text-secondary">
             <span>Lihat detail</span> <FaArrowRightLong className="w-5 h-5" />
