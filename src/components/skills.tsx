@@ -3,29 +3,72 @@ import pythonLogo from "../assets/python.webp";
 import expressLogo from "../assets/express.webp";
 import reactLogo from "../assets/react.webp";
 import tailwindLogo from "../assets/tailwind.webp";
+import laravelLogo from "../assets/laravel.webp";
+import redisLogo from "../assets/redis.webp";
+import gitLogo from "../assets/git.webp";
+import dockerLogo from "../assets/docker.webp";
+
 const Skills = () => {
   return (
-    <section id="skills"  className="max-w-6xl mx-auto px-4 min-h-screen text-text">
+    <section
+      id="skills"
+      className="max-w-6xl mx-auto px-4 min-h-screen text-text"
+    >
       <div className="grid grid-cols-2 pt-50 mb-50">
         <div className="mt-40 md:mt-0 col-span-2 md:col-span-1 order-2 md:order-1">
-          <div className="relative  w-full h-full">
-            <div className="absolute top-0 left-10 md:left-30 rounded-full w-20 h-20 md:w-22 md:h-22 object-contain shadow-xl bg-white ">
+          <div className="grid grid-cols-3  w-full h-full space-y-6">
+            <div className="rounded-full w-20 h-20 md:w-22 md:h-22 object-contain shadow-xl bg-white ">
               <img loading="lazy" src={goLogo} alt="Go Logo" />
             </div>
-            <div className="absolute top-10 right-10 md:right-30 rounded-full w-20 h-20 md:w-22 md:h-22 object-contain shadow-xl bg-white overflow-hidden">
+            <div className="rounded-full w-20 h-20 md:w-22 md:h-22 object-contain shadow-xl bg-white overflow-hidden">
               <img loading="lazy" src={expressLogo} alt="Express Logo" />
             </div>
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full w-20 h-20 md:w-22 md:h-22 object-contain p-3 shadow-xl bg-white">
-              <img loading="lazy" src={reactLogo} alt="React Logo" />
+            <div className="rounded-full w-20 h-20 md:w-22 md:h-22 object-contain shadow-xl  bg-white ">
+              <img
+                loading="lazy"
+                src={laravelLogo}
+                className="rounded-full"
+                alt="Python Logo"
+              />
             </div>
-            <div className="absolute bottom-0 right-10 md:right-30 rounded-full w-20 h-20 md:w-22 md:h-22 object-contain p-1 shadow-xl bg-white ">
-              <img loading="lazy"
+            <div className="rounded-full w-20 h-20 md:w-22 md:h-22 object-contain p-1 shadow-xl bg-white ">
+              <img
+                loading="lazy"
                 src={tailwindLogo}
                 alt="Tailwind Logo"
                 className="rounded-full"
               />
             </div>
-            <div className="absolute bottom-10 left-10 md:left-30  rounded-full w-20 h-20 md:w-22 md:h-22 object-contain p-3 shadow-xl  bg-white ">
+            <div className=" rounded-full w-20 h-20 md:w-22 md:h-22 object-contain p-3 shadow-xl bg-white">
+              <img loading="lazy" src={reactLogo} alt="React Logo" />
+            </div>
+            <div className=" rounded-full w-20 h-20 md:w-22 md:h-22 object-contain shadow-xl  bg-white ">
+              <img
+                loading="lazy"
+                src={redisLogo}
+                className="rounded-full"
+                alt="Python Logo"
+              />
+            </div>
+            <div className="  rounded-full w-20 h-20 md:w-22 md:h-22 object-contain p-3 shadow-xl  bg-white ">
+              <img
+                loading="lazy"
+                src={gitLogo}
+                className="rounded-full"
+                alt="Python Logo"
+              />
+            </div>
+
+            <div className="rounded-full w-20 h-20 md:w-22 md:h-22 object-contain shadow-xl  bg-white ">
+              <img
+                loading="lazy"
+                src={dockerLogo}
+                className="rounded-full"
+                alt="Python Logo"
+              />
+            </div>
+
+            <div className=" rounded-full w-20 h-20 md:w-22 md:h-22 object-contain p-3 shadow-xl  bg-white ">
               <img loading="lazy" src={pythonLogo} alt="Python Logo" />
             </div>
           </div>
@@ -34,11 +77,27 @@ const Skills = () => {
           <div className="text-4xl font-semibold">Skills</div>
 
           <div className="mt-4 text-lg ">
-            Web development is one of my strongest areas, on the <span className="font-semibold">frontend</span> i
-            primarily use <span className="font-semibold text-secondary">ReactJS</span> and <span className="font-semibold text-secondary">Tailwindcss</span> to build responsive interfaces
-            and dashboards. On the <span className="font-semibold">backend</span> I primarily use <span className="font-semibold text-secondary">Go</span> and <span className="font-semibold text-secondary">ExpressJS</span> and
-            I also use <span className="font-semibold text-secondary">Python</span> with <span className="font-semibold text-secondary">Flask</span> to build <span className="font-semibold">machine learning</span> when
-            appropriate.
+            Web development is one of my strongest areas. On the{" "}
+            <span className="font-semibold">frontend</span>, I primarily use{" "}
+            <span className="font-semibold text-secondary">ReactJS</span> and{" "}
+            <span className="font-semibold text-secondary">Tailwind CSS</span>{" "}
+            to build responsive and modern user interfaces. On the{" "}
+            <span className="font-semibold">backend</span>, I mainly work with{" "}
+            <span className="font-semibold text-secondary">Go</span>,{" "}
+            <span className="font-semibold text-secondary">ExpressJS</span>, and{" "}
+            <span className="font-semibold text-secondary">Laravel</span> to
+            develop scalable web applications and RESTful APIs. I also use{" "}
+            <span className="font-semibold text-secondary">Python</span> with{" "}
+            <span className="font-semibold text-secondary">Flask</span> to build{" "}
+            <span className="font-semibold">machine learning</span> applications
+            when appropriate. For development workflow and deployment, I
+            regularly work with{" "}
+            <span className="font-semibold text-secondary">Docker</span> for
+            containerization,{" "}
+            <span className="font-semibold text-secondary">Redis</span> for
+            caching and performance optimization, and{" "}
+            <span className="font-semibold text-secondary">Git</span> for
+            version control and collaborative development.
           </div>
           <div className="mt-4 space-y-6">
             <div>
