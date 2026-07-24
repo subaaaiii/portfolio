@@ -6,8 +6,8 @@ type SEOProps = {
 };
 
 export const useSEO = ({
-  title = "SubGAME: Trusted Gaming Marketplace",
-  description = "Buy and sell gaming accounts securely with trusted sellers and fast delivery on SubGAME.",
+  title = "Subairi | Full Stack Web Developer",
+  description = "Portfolio of Subairi, a Full Stack Web Developer specializing in React, TypeScript, Node js, Laravel, Golang, and modern web applications. Explore projects, skills, and professional experience.",
 }: SEOProps) => {
   useEffect(() => {
     document.title = title;
