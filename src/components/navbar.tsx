@@ -8,42 +8,41 @@ import { TiFolderOpen } from "react-icons/ti";
 import ThemeToggle from "./toggle";
 import { IoMdDownload } from "react-icons/io";
 import { useLocation, useNavigate } from "react-router";
+import { GoDotFill } from "react-icons/go";
+import { BiDownload } from "react-icons/bi";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [openMobileNav, setOpenMobileNav] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   useEffect(() => {
-  const sections = document.querySelectorAll("section[id]");
+    const sections = document.querySelectorAll("section[id]");
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      let maxRatio = 0;
-      let currentSection = activeSection;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        let maxRatio = 0;
+        let currentSection = activeSection;
 
-      entries.forEach((entry) => {
-        if (
-          entry.isIntersecting &&
-          entry.intersectionRatio > maxRatio
-        ) {
-          maxRatio = entry.intersectionRatio;
-          currentSection = entry.target.id;
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && entry.intersectionRatio > maxRatio) {
+            maxRatio = entry.intersectionRatio;
+            currentSection = entry.target.id;
+          }
+        });
+
+        if (currentSection !== activeSection) {
+          setActiveSection(currentSection);
         }
-      });
+      },
+      {
+        threshold: [0.2, 0.4, 0.6, 0.8],
+      },
+    );
 
-      if (currentSection !== activeSection) {
-        setActiveSection(currentSection);
-      }
-    },
-    {
-      threshold: [0.2, 0.4, 0.6, 0.8],
-    }
-  );
+    sections.forEach((section) => observer.observe(section));
 
-  sections.forEach((section) => observer.observe(section));
-
-  return () => observer.disconnect();
-}, [activeSection]);
+    return () => observer.disconnect();
+  }, [activeSection]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -79,14 +78,25 @@ const Navbar = () => {
       <div
         className={`fixed bg-bg z-999 top-0 left-0 right-0 max-w-6xl mx-auto px-4 transition-all duration-300 ${scrolled ? "left-2 right-2 mt-2 shadow-md rounded-full " : ""} text-text`}
       >
-        <div className="flex items-center justify-between py-4 px-2">
-          <a href="/#" className="text-xl font-bold">
-            Portfolio
-          </a>
+        <div className="flex items-center justify-between py-4 px-2 ">
+          <div className=" relative flex gap-2 items-center border border-text text-text rounded-full px-4 py-1.5 animate__animated animate__fadeIn">
+            <GoDotFill className="text-green-500 hidden lg:block animate__animated animate__flash [animation-delay:2500ms] animate__slower animate__infinite" />
+            <div className="hidden lg:block">available for new projects</div>
+            <GoDotFill className="text-green-500 block lg:hidden" />
+            <div className="flex flex-col block lg:hidden">
+              <div>available</div>
+              <div className="absolute -bottom-1.5 left-6  bg-bg text-[10px] p-0.3">
+                for new projects
+              </div>
+            </div>
+          </div>
           <div className=" flex items-center space-x-4 md:hidden">
             <ThemeToggle />
 
-            <button aria-label="Open navigation menu" onClick={() => setOpenMobileNav(!openMobileNav)}>
+            <button
+              aria-label="Open navigation menu"
+              onClick={() => setOpenMobileNav(!openMobileNav)}
+            >
               {openMobileNav ? (
                 <IoClose className="w-8 h-8" />
               ) : (
@@ -103,9 +113,7 @@ const Navbar = () => {
                     handleNavigate("home");
                   }}
                   className={`hover:underline  flex items-center gap-2 px-2 py-4  ${
-                    activeSection === "home"
-                      ? "bg-secondary/20 font-semibold"
-                      : "bg-surface"
+                    activeSection === "home" ? "font-semibold" : "bg-surface"
                   } rounded-md`}
                 >
                   <RiHome6Line className="w-6 h-6" />
@@ -117,13 +125,11 @@ const Navbar = () => {
                     handleNavigate("about");
                   }}
                   className={`hover:underline  flex items-center gap-2 px-2 py-4  ${
-                    activeSection === "about"
-                      ? "bg-secondary/20 font-semibold"
-                      : "bg-surface"
+                    activeSection === "about" ? "font-semibold" : "bg-surface"
                   } rounded-md`}
                 >
                   <HiOutlineUser className="w-6 h-6" />
-                  <span className="text-lg">About me</span>
+                  <span className="text-lg text-">About me</span>
                 </button>
                 <button
                   onClick={() => {
@@ -131,9 +137,7 @@ const Navbar = () => {
                     handleNavigate("skills");
                   }}
                   className={`hover:underline  flex items-center gap-2 px-2 py-4  ${
-                    activeSection === "skills"
-                      ? "bg-secondary/20 font-semibold"
-                      : "bg-surface"
+                    activeSection === "skills" ? "font-semibold" : "bg-surface"
                   } rounded-md`}
                 >
                   <FaCode className="w-6 h-6" />
@@ -146,7 +150,7 @@ const Navbar = () => {
                   }}
                   className={`hover:underline  flex items-center gap-2 px-2 py-4  ${
                     activeSection === "projects"
-                      ? "bg-secondary/20 font-semibold"
+                      ? "font-semibold"
                       : "bg-surface"
                   } rounded-md`}
                 >
@@ -159,9 +163,7 @@ const Navbar = () => {
                     handleNavigate("contact");
                   }}
                   className={`hover:underline  flex items-center gap-2 px-2 py-4  ${
-                    activeSection === "contact"
-                      ? "bg-secondary/20 font-semibold"
-                      : "bg-surface"
+                    activeSection === "contact" ? "font-semibold" : "bg-surface"
                   } rounded-md`}
                 >
                   <MdOutlineCall className="w-6 h-6" />
@@ -170,27 +172,27 @@ const Navbar = () => {
                 <a
                   href="/Subairi-resume.pdf"
                   download="Subairi-CV.pdf"
-                  className="hover:underline flex items-center gap-2 px-2 py-4 bg-secondary text-white rounded-lg"
+                  className="hover:underline flex items-center gap-2 px-2 py-4 bg-text text-bg rounded-lg"
                 >
                   <IoMdDownload className="w-6 h-6" />
-                  <span className="text-lg">Dowload cv</span>
+                  <span className="text-lg">Download cv</span>
                 </a>
               </div>
             </div>
           )}
-          <div className="flex md:space-x-4 lg:space-x-10 items-center hidden md:flex">
+          <div className="flex md:space-x-3 lg:space-x-10 items-center hidden md:flex animate__animated animate__fadeIn">
             <a
               href="/#home"
               className={`hover:font-semibold ${
-                activeSection === "home" ? "text-secondary font-semibold" : ""
+                activeSection === "home" ? "font-semibold" : ""
               }`}
             >
               Home
             </a>
             <a
               href="/#about"
-              className={`hover:font-semibold ${
-                activeSection === "about" ? "text-secondary font-semibold" : ""
+              className={`hover:font-semibold  justify-center ${
+                activeSection === "about" ? "font-semibold" : ""
               }`}
             >
               About me
@@ -198,7 +200,7 @@ const Navbar = () => {
             <a
               href="/#skills"
               className={`hover:font-semibold ${
-                activeSection === "skills" ? "text-secondary font-semibold" : ""
+                activeSection === "skills" ? "font-semibold" : ""
               }`}
             >
               Skills
@@ -206,9 +208,7 @@ const Navbar = () => {
             <a
               href="/#projects"
               className={`hover:font-semibold ${
-                activeSection === "projects"
-                  ? "text-secondary font-semibold"
-                  : ""
+                activeSection === "projects" ? "font-semibold" : ""
               }`}
             >
               Projects
@@ -216,9 +216,7 @@ const Navbar = () => {
             <a
               href="/#contact"
               className={`hover:font-semibold ${
-                activeSection === "contact"
-                  ? "text-secondary font-semibold"
-                  : ""
+                activeSection === "contact" ? "font-semibold" : ""
               }`}
             >
               Contact
@@ -227,7 +225,7 @@ const Navbar = () => {
             <a
               href="/Subairi-resume.pdf"
               download="Subairi-CV.pdf"
-              className="hover:font-semibold py-2 px-4 bg-secondary text-white rounded-lg"
+              className="hover:font-semibold py-2 px-4 bg-text text-bg rounded-lg animate__animated animate__fadeIn"
             >
               Download CV
             </a>

@@ -1,6 +1,7 @@
 import { lazy } from "react";
 import { Route, Routes } from "react-router";
 import KasirPOS from "../pages/kasirpos";
+import MyTSel from "../pages/mytsel";
 // import Pesantren from "../pages/pesantren";
 // import Growlab from "../pages/growlab";
 // import Subgame from "../pages/subgame";
@@ -17,6 +18,7 @@ function Approutes() {
       <Route path="/project/growlab" element={<Growlab />} />
       <Route path="/project/subgame" element={<Subgame />} />
       <Route path="/project/kasirpos" element={<KasirPOS />} />
+      <Route path="/project/mytsel" element={<MyTSel />} />
     </Routes>
   );
 }
