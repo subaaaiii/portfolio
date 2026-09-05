@@ -9,7 +9,6 @@ import ThemeToggle from "./toggle";
 import { IoMdDownload } from "react-icons/io";
 import { useLocation, useNavigate } from "react-router";
 import { GoDotFill } from "react-icons/go";
-import { BiDownload } from "react-icons/bi";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
