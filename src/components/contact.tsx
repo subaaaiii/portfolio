@@ -1,16 +1,17 @@
+import { BiSend } from "react-icons/bi";
 import { MdEmail } from "react-icons/md";
 
 const Contact = () => {
   return (
-    <section id="contact" className="max-w-6xl mx-auto pb-20 pt-20 text-text">
+    <section id="contact" className="max-w-6xl mx-auto pb-20 pt-20 text-text scroll-fadeInUp">
       <h1 className="text-4xl md:text-7xl text-text text-center font-semibold leading-relaxed">
         Have an Awesome Project Idea?{" "}
-        <span className="text-4xl md:text-7xl text-secondary">Let's Discuss</span>
+        <span className="text-4xl md:text-7xl text-text">Let's Discuss</span>
       </h1>
       <div className="flex justify-center w-full mt-4 px-4 md:px-0">
         <div className="w-full md:w-[80%] rounded-full border border-gray-500 flex items-center p-3">
-          <div className="p-3 rounded-full bg-secondary/20">
-            <MdEmail className="w-8 h-8 text-secondary" />
+          <div className="p-3 rounded-full bg-surface">
+            <MdEmail className="w-8 h-8 text-text" />
           </div>
           <input
             type="text"
@@ -24,9 +25,10 @@ const Contact = () => {
                 "_blank",
               );
             }}
-            className="py-3 px-6 bg-secondary rounded-full text-lg text-bg cursor-pointer font-medium"
+            className="py-3 px-6 bg-text rounded-full text-lg text-bg cursor-pointer font-medium flex items-center gap-2"
           >
-            Send
+            Send 
+            <BiSend className=""/>
           </button>
         </div>
       </div>

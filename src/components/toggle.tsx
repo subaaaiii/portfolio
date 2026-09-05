@@ -30,7 +30,7 @@ const ThemeToggle = () => {
       onClick={toggleTheme}
       aria-label="Set web theme"
       className={`relative w-16 h-8 flex items-center rounded-full p-1 transition-colors duration-300 cursor-pointer ${
-        darkMode ? "bg-secondary" : "bg-gray-300"
+        darkMode ? "bg-text" : "bg-text"
       }`}
     >
       <div
@@ -39,9 +39,9 @@ const ThemeToggle = () => {
         }`}
       >
         {darkMode ? (
-          <MdDarkMode className="text-black text-sm" />
+          <MdDarkMode className="text-bg text-sm" />
         ) : (
-          <MdLightMode className="text-yellow-500 text-sm" />
+          <MdLightMode className="text-text text-sm" />
         )}
       </div>
     </button>
