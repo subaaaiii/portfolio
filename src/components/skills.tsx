@@ -7,6 +7,7 @@ import laravelLogo from "../assets/laravel.png";
 import redisLogo from "../assets/redis.png";
 import gitLogo from "../assets/git.webp";
 import dockerLogo from "../assets/docker.png";
+import flutterLogo from "../assets/flutter.png";
 import SkillBars from "./skillBar";
 
 const Skills = () => {
@@ -143,6 +144,17 @@ const Skills = () => {
                       className="object-contain h-10 "
                     />
                     <div className="font-semibold text-bg">git</div>
+                  </div>
+                </div>
+                <div className="h-fit bg-[#39cefd] rounded-lg">
+                  <div className="ml-2 rounded-l-md rounded-r-lg flex items-center p-2  bg-text gap-2 h-fit">
+                    <img
+                      loading="lazy"
+                      src={flutterLogo}
+                      alt="Flutter Logo"
+                      className="object-contain h-10 "
+                    />
+                    <div className="font-semibold text-bg">Flutter</div>
                   </div>
                 </div>
               </div>
