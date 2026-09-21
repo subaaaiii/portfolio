@@ -26,6 +26,7 @@ import brand2 from "../assets/project-subgame/brand-2.webp";
 
 import { useEffect } from "react";
 import { useSEO } from "../seo";
+import { FaGlobe } from "react-icons/fa";
 
 const Subgame = () => {
   useEffect(() => {
@@ -44,6 +45,7 @@ const Subgame = () => {
       <h1 className="text-[clamp(1.5rem,4vw,3rem)] text-balance font-bold">
         SubGame
       </h1>
+      <a href="http://subgame.subairi.cloud/" target="_blank" className="px-4 py-2 rounded-xl bg-text text-bg flex items-center gap-2 w-fit"><FaGlobe /> Visit website </a>
       <p className="mt-2 text-[clamp(1rem,2vw,1.5rem)] text-justify text-lg">
         Platform marketplace game digital yang menghubungkan pembeli dan penjual
         untuk melakukan transaksi produk game secara aman dan terstruktur.
@@ -104,11 +106,10 @@ const Subgame = () => {
         <img loading="lazy" src={katalog4} alt="detail produk" />
       </div>
       <h2 className="mt-4 text-[clamp(1.15rem,2vw,2rem)] font-semibold">
-        4. Sistem Pembayaran (Dummy callback)
+        4. Sistem Pembayaran (Payment gateway midtrans)
       </h2>
       <p className="mt-2 text-[clamp(1rem,2vw,1.5rem)] text-justify text-lg">
-        Mengembangkan simulasi integrasi payment gateway menggunakan dummy
-        callback untuk menguji alur verifikasi pembayaran dan pembaruan status
+        Mengintegrasikan payment gateway dari midtrans sandbox untuk verifikasi pembayaran dan pembaruan status
         transaksi secara otomatis dalam lingkungan pengembangan.
       </p>
       <div className="grid md:grid-cols-2 gap-2">

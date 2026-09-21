@@ -7,6 +7,7 @@ import myTsel from "../assets/mytsel.png";
 
 import { Link } from "react-router";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { GoDotFill } from "react-icons/go";
 const Projects = () => {
   return (
     <section
@@ -28,8 +29,9 @@ const Projects = () => {
           aria-label="Open SubGame project detail"
           className="relative pb-12 col-span-3 md:col-span-1 shadow-lg rounded-lg overflow-hidden hover:-translate-y-2 transition-transform duration-300 cursor-pointer scroll-fadeInUp "
         >
-          <div className="absolute top-3 left-3 bg-bg py-2 px-3 rounded-full text-text text-sm">
-            Featured
+          <div className="absolute top-3 left-3 bg-bg py-1 px-3 rounded-full text-text text-sm flex items-center gap-1 z-10">
+             <GoDotFill className="text-green-500 block animate__animated animate__flash animate__slower animate__infinite" />
+            live
           </div>
           <div className="relative  w-full h-60  bg-surface overflow-hidden">
             <img

@@ -8,6 +8,9 @@ import redisLogo from "../assets/redis.png";
 import gitLogo from "../assets/git.webp";
 import dockerLogo from "../assets/docker.png";
 import flutterLogo from "../assets/flutter.png";
+import nextLogo from "../assets/next.png";
+import postgreLogo from "../assets/postgre.png";
+import mysqlLogo from "../assets/mysql.png";
 import SkillBars from "./skillBar";
 
 const Skills = () => {
@@ -155,6 +158,39 @@ const Skills = () => {
                       className="object-contain h-10 "
                     />
                     <div className="font-semibold text-bg">Flutter</div>
+                  </div>
+                </div>
+                <div className="h-fit bg-white rounded-lg">
+                  <div className="ml-2 rounded-l-md rounded-r-lg flex items-center p-2  bg-text gap-2 h-fit">
+                    <img
+                      loading="lazy"
+                      src={nextLogo}
+                      alt="Next Js Logo"
+                      className="object-contain h-10 "
+                    />
+                    <div className="font-semibold text-bg">Next JS</div>
+                  </div>
+                </div>
+                <div className="h-fit bg-[#005e86] rounded-lg">
+                  <div className="ml-2 rounded-l-md rounded-r-lg flex items-center p-2  bg-text gap-2 h-fit">
+                    <img
+                      loading="lazy"
+                      src={mysqlLogo}
+                      alt="MySQL Logo"
+                      className="object-contain h-10 "
+                    />
+                    <div className="font-semibold text-bg">MySQL</div>
+                  </div>
+                </div>
+                <div className="h-fit bg-[#31648c] rounded-lg">
+                  <div className="ml-2 rounded-l-md rounded-r-lg flex items-center p-2  bg-text gap-2 h-fit">
+                    <img
+                      loading="lazy"
+                      src={postgreLogo}
+                      alt="PostgreSQL Logo"
+                      className="object-contain h-10 "
+                    />
+                    <div className="font-semibold text-bg">PostgreSQL</div>
                   </div>
                 </div>
               </div>
